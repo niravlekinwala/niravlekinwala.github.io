@@ -108,7 +108,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Om Prakash"
+  name             : "Nirav L. Lekinwala"
   avatar           : "/assets/images/bio_photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "**Explore**.Trip.**Fall**.Learn.**Rise**.Repeat"
   location         : "Mumbai, IN"
@@ -119,10 +119,10 @@ author:
       # url: mailto:your.name@email.com
     - label: "ResearchGate"
       icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Om_Prakash120"
+      url: "https://www.researchgate.net/profile/Nirav-Lekinwala"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/om-prakash-0a783291/"
+      url: "https://www.linkedin.com/in/nirav-lekinwala/"
     - #label: "Website"
       #icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -134,10 +134,10 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/omprakash.clicks/"
+      url: "https://www.instagram.com/niravlekinwala/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100001428112843"
+      url: "hhttps://www.facebook.com/niravlekinwala/"
     - label: "Blog"
       icon: "fas fa-fw fa-blog"
       url: "/blog/"
@@ -147,13 +147,13 @@ footer:
   links:
     - label: "ResearchGate"
       icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Om_Prakash120"
+      url: "https://www.researchgate.net/profile/Nirav-Lekinwala"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?hl=en&user=B0GS6lsAAAAJ"
+      url: "https://scholar.google.com/citations?user=EarHUEQAAAAJ"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/om-prakash-0a783291/"
+      url: "https://www.linkedin.com/in/nirav-lekinwala/"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -164,7 +164,7 @@ footer:
     #  icon: "fab fa-fw fa-bitbucket"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/prakashoms"
+      url: "https://github.com/niravlekinwala"
 
 
 # Reading Files
