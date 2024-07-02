@@ -1,10 +1,10 @@
 ---
 classes: wide
-title: Welcome to Om Prakash's website
+title: Welcome to Nirav Lekinwala's website
 permalink: /
 ---
 
-Om Prakash `(OP)` received his Ph.D. from the [Department of Chemical Engineering](https://www.che.iitb.ac.in/) at the [Indian Institute of Technology Bombay](http://www.iitb.ac.in/) (Mumbai, India) in Aug 2022, where he was a humble part of the Automation Lab.
+Nirav Lekinwala received his Ph.D. from the [Department of Chemical Engineering](https://www.che.iitb.ac.in/) at the [Indian Institute of Technology Bombay](http://www.iitb.ac.in/) (Mumbai, India) in Feb 2024, where he was a humble part of the Automation Lab.
 Just saying Ph.D. without mentioning the topic doesn't make much sense. So, here goes: *Sensor Network design for Chemical Processes* broadly summarized his research work at IIT Bombay.
 
 He made this website out of curiosity. You are most welcome to give any constructive feedback (comments) on his [posts](/blog/). Also, you can check out the Automation Lab [guide-student network](/automationlab-network/) created in D3.js. You will have fun playing with the graph.
