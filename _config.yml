@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Nirav L. Lekinwala"
+title                    : "Nirav Lekinwala"
 title_separator          : "-"
 subtitle                 : "Version: 1.0" # site tagline that appears below site title in masthead
-name                     : "Nirav L. Lekinwala"
-description              : "Hello everyone, I'm Dr. Nirav L. Lekinwala, I recently completed my Ph.D. from the Department of Chemical Engineering at IIT Bombay. Welcome to my website."
-url                      : #"https://prakashoms.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Nirav Lekinwala"
+description              : "Hello everyone, I'm Dr. Nirav Lekinwala, I recently completed my Ph.D. from the Department of Chemical Engineering at IIT Bombay. Welcome to my website."
+url                      : "https://niravlekinwala.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"" # the subpath of your site, e.g. "/blog"
 repository               : "niravlekinwala/niravlekinwala.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "assets/images/website_logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Nirav L. Lekinwala" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Nirav Lekinwala" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -108,10 +108,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Nirav L. Lekinwala"
+  name             : "Nirav Lekinwala"
   avatar           : "/assets/images/bio_photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "**Explore**.Trip.**Fall**.Learn.**Rise**.Repeat"
-  location         : "Mumbai, IN"
+  bio              : "Always Stay Curious"
+  location         : "Bengaluru, KA, IN"
   email            :
   links:
     - #label: "Email"
