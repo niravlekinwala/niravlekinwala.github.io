@@ -1,115 +1,76 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{LEKINWALA2020117544,
+title = {A framework for setting up a country-wide network of regional surface PM<sub>2.5</sub> sampling sites utilising a satellite-derived proxy - The COALESCE project, India},
+journal = {Atmospheric Environment},
+abbr = {AtmEnv},
+volume = {234},
+pages = {117544},
+year = {2020},
+issn = {1352-2310},
+doi = {https://doi.org/10.1016/j.atmosenv.2020.117544},
+url = {https://www.sciencedirect.com/science/article/pii/S135223102030279X},
+author = {Nirav L. Lekinwala and Ankur Bhardwaj and Ramya {Sunder Raman} and Mani Bhushan and Kunal Bali and Sagnik Dey},
+keywords = {Regionally representative PM sampling sites, MODIS aerosol Optical depth, Coefficient of divergence (CoD), Pearson correlation coefficient (PCC), Mutual information (MI), COALESCE project},
+abstract = {Air quality management and assessment of aerosol climate effects over a large area require the strategic placement of regionally representative monitoring sites (RRMS) to capture the required information. Ground-based, fine particulate matter (PM<sub>2.5</sub>) concentrations measured for a long duration at high spatial resolution i.e. at several potential locations in a region help identify an optimal regionally representative site for the monitoring network. However, in the absence of long-term PM<sub>2.5</sub> concentrations with high spatial resolution, identification of RRMS is a challenge. To identify for such situations, a novel methodology utilising satellite-derived PM<sub>2.5</sub> is presented in this study. High spatial resolution (1km x 1km) daily aerosol optical depth (AOD) over several years (2004 - 2011) is used to derive surface PM<sub>2.5</sub> using appropriate conversion factors. PM<sub>2.5</sub> concentrations thus derived for a potential site and its nearby cells in the region are subjected to statistical analysis, to quantify linear/non-linear relationships between the respective PM<sub>2.5</sub> time-series. Metrics such as coefficient of divergence (CoD), Pearson correlation coefficient (PCC) and Mutual information (MI) are calculated to assess the regional representativeness of a site. These criteria combined with physical criteria such as proximity of the site to local sources, local meteorology analysis and clustered air parcel back-trajectory analysis, are used in a weight-of-evidence approach to establish site adequacy. The selection and validation of eleven sites for the COALESCE project, is used as an illustrative example, to demonstrate the effectiveness of the site-selection methodology developed in this study.}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@article{LEKINWALA2020100949,
+title = {Weight-of-evidence approach to identify regionally representative sites for air-quality monitoring network: Satellite data-based analysis},
+journal = {MethodsX},
+abbr = {MethodsX},
+volume = {7},
+pages = {100949},
+year = {2020},
+issn = {2215-0161},
+doi = {https://doi.org/10.1016/j.mex.2020.100949},
+url = {https://www.sciencedirect.com/science/article/pii/S2215016120301692},
+author = {Nirav L Lekinwala and Ankur Bharadwaj and Ramya {Sunder Raman} and Mani Bhushan and Kunal Bali and Sagnik Dey},
+keywords = {MODIS, MAIAC Algorithm, Aerosol Optical Depth, Coefficient of Divergence, Pearson Correlation Coefficient, Mutual Information, Python, CDO},
+abstract = {The methodology discussed in Lekinwala et al., 2020, hereinafter referred to as the ‘parent article’, is used to setup a nation-wide network for background PM<sub>2.5</sub> measurement at strategic locations, optimally placing sites to obtain maximum regionally representative PM<sub>2.5</sub> concentrations with minimum number of sites. Traditionally, in-situ PM<sub>2.5</sub> measurements are obtained for several potential sites and compared to identify the most regionally representative sites [4], Wongphatarakul et al., 1998) at the location. The ‘parent article’ proposes the use of satellite-derived proxy for aerosol (Aerosol Optical Depth, AOD) data in the absence of in-situ PM<sub>2.5</sub> measurements. This article focuses on the details about satellite-data processing which forms part of the methodology discussed in the ‘parent article’. Following are some relevant aspects:•High resolution AOD is retrieved from Moderate Resolution Imaging Spectroradiometer (MODIS) instruments aboard NASA's Aqua and Terra satellite using Multi-Angle Implementation of Atmospheric Correction (MAIAC) algorithm. The data is stored as grids of size 1200  ×  1200 and a total of seven such grids cover the Indian land mass. These grids were merged, regridded and multiplied by conversion factors from GEOS-Chem Chemical Transport Model to obtain PM<sub>2.5</sub> values. Standard set of tools like CDO and NCL are used to manipulate the satellite-data (*.nc files).•The PM<sub>2.5</sub> values are subjected to various statistical analysis using metrics like coefficient of divergence (CoD), Pearson correlation coefficient (PCC) and mutual information (MI).•Computations for CoD, MI are performed using Python codes developed in-house while a function in NumPy module of Python was used for PCC calculations.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@article{LEKINWALA2022156294,
+title = {Generalised non-negative matrix factorisation for air pollution source apportionment},
+journal = {Science of The Total Environment},
+abbr = {STOTEN},
+volume = {839},
+pages = {156294},
+year = {2022},
+issn = {0048-9697},
+doi = {https://doi.org/10.1016/j.scitotenv.2022.156294},
+url = {https://www.sciencedirect.com/science/article/pii/S0048969722033915},
+author = {Nirav L. Lekinwala and Mani Bhushan},
+keywords = {Receptor modeling, Correlated errors, Multiplicative update, Projected gradient approach},
+abstract = {Source Apportionment (SA) techniques are widely used for identifying key sources of air pollution, thereby providing critical inputs for policy measures. Positive Matrix Factorisation (PMF) (Paatero and Tapper, 1994) is a widely used SA technique. PMF uses the speciated concentration data (X) collected over several days and factorises it into source contribution (G) and source profile (F) matrices, albeit under positivity constraint. Towards this end, it involves solving an optimisation problem where the elements of X are weighted by the inverse of the standard deviations of the corresponding errors introduced during the sampling and chemical analysis process. Thus, PMF implicitly assumes that the errors in different elements of the X matrix are uncorrelated. This assumption may not hold since the sampling, and chemical analysis steps deployed in any data-collection campaign will inevitably lead to correlated errors. While there are other existing Non-Negative Matrix Factorisation (NMF) methods in literature that can be potentially used for SA, these also make various restrictive assumptions about the error covariance structure. In this work, we propose a new method called Generalised Non-Negative Matrix Factorisation (GNMF) to fill this gap. In particular, the proposed method is able to incorporate any error covariance matrix without making any restrictive assumptions on its structure. Towards this end, we integrate the full error covariance matrix in the objective function to be minimised to obtain F and G matrices. We derive the corresponding update rules for obtaining these matrices iteratively. To ensure non-negativity, we extend the multiplicative and projected gradient-based ideas available in NMF literature to the proposed GNMF approach. The proposed method subsumes various NMF methods available in literature as special cases. The utility of the proposed approach is demonstrated by comparing its performance with other methods on an SA problem using a dataset derived from field measurements.}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{LEKINWALA2022101257,
+title = {<tt>pyGNMF</tt>: A Python library for implementation of generalised non-negative matrix factorisation method},
+journal = {SoftwareX},
+abbr = {SoftwareX},
+volume = {20},
+pages = {101257},
+year = {2022},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2022.101257},
+url = {https://www.sciencedirect.com/science/article/pii/S2352711022001753},
+author = {Nirav L. Lekinwala and Mani Bhushan},
+keywords = {Steepest descent, Correlated errors, Multiplicative update, Projected gradient update},
+abstract = {This article introduces a Python library named pyGNMF, which implements the recently proposed generalised non-negative matrix factorisation (GNMF) method. GNMF factorises a non-negative matrix into a product of two non-negative matrices by incorporating error-covariance information between different elements of the dataset. In literature, several non-negative matrix factorisation (NNMF) methods such as NMF, glsNMF and LS-NMF are available; however, they assume different forms of the error-covariance matrix. In particular, NMF assumes identity error-covariance matrix, LS-NMF assumes diagonal error-covariance matrix, and glsNMF assumes errors to be correlated in only one direction (rows or columns). In contrast, GNMF can incorporate the full error-covariance information and depending on the error-covariance structure, GNMF subsumes these methods as special cases. The parent article introduces two approaches to solve the problem by using projected gradient-based and multiplicative updates and is demonstrated on an air pollution source apportionment problem. Both these approaches have been incorporated into the pyGNMF library. The mathematical nature of GNMF method makes it domain-agnostic, enabling users from different domains to deploy GNMF for their non-negative matrix factorisation applications.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
-}
+@article{Manwani_2024, 
+title={Unravelling the Nexus of emission sources and meteorology on Regional PM<sub>2.5</sub>: A Comprehensive Analysis Using Source Apportionment Model and Machine Learning for Effective Pollution Mitigation Strategies}, 
+abbr = {EGU 2024},
+url={http://dx.doi.org/10.5194/egusphere-egu24-829}, 
+DOI={10.5194/egusphere-egu24-829}, 
+publisher={Copernicus GmbH}, 
+author={Manwani, Pooja and Lekinwala, Nirav L. and Bhushan, Mani and Venkataraman, Chandra and Phuleria, Harish}, 
+year={2024}, 
+month=mar,
+abstract={
+The PM<sub>2.5</sub> concentrations in Northern India are one of the highest in the world, posing significant risks to human health and affecting climate and air quality. This study aims to assess the influence of different sources of emissions and meteorological conditions on the levels of PM<sub>2.5</sub> at a regional background location in Northern India. The study employed a combination of the Random Forest model with Shapley Additive exPlanations (RF-SHAP) and Partial Dependence Plot (RF-PDP), together with Positive Matrix Factorization (PMF), to assess the effects of various factors on PM<sub>2.5</sub> pollution. The RF model accurately captured the variation of PM<sub>2.5</sub> (R<sup>2</sup> = 0.95) during the sampling period. The results show that emissions sources and meteorology accounted for approximately 79% (99.8 μg/m3 ± 68.9) and 21% (26.5 ± 18.3 μg/m3) of the variability in PM<sub>2.5</sub> levels, respectively. Secondary aerosols (SA) had the most significant influence among all sources, accounting for around 45.7% and having a SHAP value of approximately 23.6 μg/m3. Biomass burning had the second highest impact, contributing around 23.1% and having a SHAP value of approximately 19.3 μg/m3. The RF-PDP approach was utilized to assess the sensitivity of the combined influence of secondary aerosols and biomass burning on PM<sub>2.5</sub> concentrations. The results suggest that controlling concentrations of secondary aerosols below 25 μg/m3 and biomass burning below 15 μg/m3can reduce the overall PM<sub>2.5</sub> concentration by over 2.5 times. It is to be noted that even after the strategic control measures, PM<sub>2.5</sub> concentrations are predicted to be over 100 μg/m3. Given the critical role of secondary aerosols in PM<sub>2.5</sub> pollution and the complexity of their generation mechanisms, the temporal variations of SA concentrations and their drivers were also analyzed via RF-SHAP during the study period. The model results highlight that secondary aerosol formation is mostly driven by meteorological conditions (64% ~ 13.6 ± 18.5 μg/m3) than primary emissions (36% ~ 7.7 ± 10.4  μg/m3), making it difficult to implement control strategies due to dependence on meteorological conditions. However, the sensitivity analysis using RF-PDP suggests that under favourable meteorological conditions, strategic control of primary emissions like biomass burning and coal combustion can reduce the secondary aerosol concentration and consequently reduce particulate pollution. In conclusion, the findings aid in uncovering approaches to effectively mitigate particulate pollution by managing emissions during favourable meteorological situations. Thus, the integration of machine learning algorithms with expert decisions and existing methodology can assist in effectively addressing ambient air pollution and find extensive use in the field of air pollution.
+}}
