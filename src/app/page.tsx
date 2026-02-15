@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Code, Database, Wind } from "lucide-react";
+import { ArrowRight, Code, Database, Wind, CloudRainWind, Cpu, ChartCandlestick } from "lucide-react";
 import { motion } from "framer-motion";
 import HeroAnimation from "@/components/HeroAnimation";
 
@@ -30,13 +30,33 @@ export default function Home() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground">
-            Nirav Lekinwala, PhD
-          </h1>
+          <div className="flex flex-col items-center gap-3 mb-8">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground flex flex-col md:flex-row items-center gap-3 md:gap-4 leading-none">
+              Nirav Lekinwala
+              <span className="inline-flex items-center justify-center text-4xl md:text-4xl font-bold text-primary bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 align-middle leading-none mt-1 md:mt-0">
+                PhD
+              </span>
+            </h1>
+            <span className="text-xl md:text-xl text-muted-foreground font-medium tracking-wide">
+              (he/him)
+            </span>
+          </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-md border border-border text-sm font-medium mb-8 text-foreground shadow-sm">
-            <Wind className="w-5 h-5 text-primary" />
-            <span className="text-lg md:text-xl">Air Quality Modeller & Data Scientist</span>
+          <div className="flex flex-wrap justify-center gap-3 px-4 mb-8 max-w-3xl">
+            {[
+              { Icon: Cpu, text: "Tech. Enthusiast" },
+              { Icon: ChartCandlestick, text: "Data Scientist" },
+              { Icon: Code, text: "Python Programmer" },
+              { Icon: CloudRainWind, text: "Air Quality Modeller" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-md border border-border text-sm font-medium text-foreground shadow-sm hover:scale-105 transition-transform duration-200"
+              >
+                <item.Icon className="w-5 h-5 text-primary" />
+                <span className="text-base md:text-lg">{item.text}</span>
+              </div>
+            ))}
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
@@ -67,19 +87,19 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="container mx-auto px-4 py-24 z-10">
+      {/* <section className="container mx-auto px-4 py-24 z-10">
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               icon: <Wind className="w-10 h-10 text-cyan-500" />,
-              title: "Atmospheric Simulation",
-              desc: "Modeling pollutant dispersion dynamics in complex urban environments.",
+              title: "Chemical Transport Models",
+              desc: "Using WRF-CAMx to simulate air quality over India",
               color: "from-cyan-500/20 to-blue-500/5",
             },
             {
               icon: <Database className="w-10 h-10 text-purple-500" />,
-              title: "Big Data Analytics",
-              desc: "Processing terabytes of sensor data to uncover actionable environmental insights.",
+              title: "Data Analysis",
+              desc: "Processing ",
               color: "from-purple-500/20 to-pink-500/5",
             },
             {
@@ -103,7 +123,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

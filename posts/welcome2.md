@@ -2,6 +2,7 @@
 title: Welcome to my new website - TESTING
 date: '2026-02-14'
 description: This is the first post on my new portfolio website.
+tags: ["Techology"]
 ---
 
 # Welcome

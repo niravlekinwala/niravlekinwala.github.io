@@ -16,8 +16,8 @@ export default function Projects() {
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-16">
                     <h1 className="text-5xl font-bold mb-6 text-gradient">Featured Projects</h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Exploring the intersection of atmospheric science and code.
+                    <p className="text-3xl text-muted-foreground max-w-2xl mx-auto">
+                        Where programming, data, and visualization come together to tell meaningful stories
                     </p>
                 </div>
 
@@ -48,7 +48,7 @@ export default function Projects() {
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-primary/10 text-primary border border-primary/10"
+                                                className="px-3 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-lg bg-primary/15 text-primary border border-primary/40"
                                             >
                                                 {tag}
                                             </span>

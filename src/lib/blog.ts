@@ -10,6 +10,7 @@ export interface BlogPost {
     date: string;
     description: string;
     content: string;
+    tags: string[];
 }
 
 export function getSortedPostsData(): BlogPost[] {
@@ -33,6 +34,7 @@ export function getSortedPostsData(): BlogPost[] {
                 title: data.title || "Untitled",
                 date: data.date || new Date().toISOString(),
                 description: data.description || "",
+                tags: data.tags || [],
             };
         });
 
@@ -55,5 +57,6 @@ export function getPostData(slug: string): BlogPost | null {
         title: data.title || "Untitled",
         date: data.date || new Date().toISOString(),
         description: data.description || "",
+        tags: data.tags || [],
     };
 }

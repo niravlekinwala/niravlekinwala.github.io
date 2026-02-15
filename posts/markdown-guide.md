@@ -2,6 +2,7 @@
 title: "Markdown Features Guide"
 date: "2024-03-20"
 description: "A comprehensive guide to using Markdown features on this blog, including tables, math equations, code blocks, and more."
+tags: ["Air Quality"]
 ---
 
 This guide demonstrates the Markdown features available on this website. You can use this post as a reference or template when writing new content.

@@ -1,5 +1,8 @@
-@import "tailwindcss";
 @import "katex/dist/katex.min.css";
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-background: hsl(var(--background));
@@ -36,6 +39,9 @@
 
   /* Custom Gradients */
   --image-gradient-mesh: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+
+  /* Typography - IBM Plex Mono for code blocks */
+  --font-mono: var(--font-ibm-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @layer base {
@@ -128,4 +134,13 @@
   .glass-card {
     @apply bg-transparent dark:bg-transparent border border-zinc-100/50 dark:border-white/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-primary/30;
   }
+}
+
+/* Override prose's code font-size — affects .token spans inside syntax highlighter */
+.prose code,
+.prose pre,
+.prose pre code,
+.prose pre span {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
 }
