@@ -21,9 +21,14 @@ export default function HeroAnimation() {
     const canvasRef = React.useRef<HTMLCanvasElement>(null);
     const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = React.useState(false);
+    const [isMobile, setIsMobile] = React.useState(false);
 
     React.useEffect(() => {
         setMounted(true);
+        setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     React.useEffect(() => {
@@ -35,6 +40,7 @@ export default function HeroAnimation() {
 
         let animationFrameId: number;
         let particles: Particle[] = [];
+        const particleCount = isMobile ? 50 : 125;
 
         const resizeCanvas = () => {
             if (canvas.parentElement) {
@@ -57,13 +63,12 @@ export default function HeroAnimation() {
             mass: number;
 
             constructor() {
-                this.radius = Math.random() * 5 + 1; // 1-3px radius
+                this.radius = Math.random() * 5 + 1;
                 this.x = Math.random() * (canvas.width - this.radius * 2) + this.radius;
                 this.y = Math.random() * (canvas.height - this.radius * 2) + this.radius;
                 this.vx = (Math.random() - 0.5) * 1.5;
                 this.vy = (Math.random() - 0.5) * 1.5;
                 this.mass = 1;
-                // Determine color based on theme
                 const isDark = resolvedTheme === "dark";
                 this.color = isDark
                     ? `rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1})`
@@ -80,13 +85,9 @@ export default function HeroAnimation() {
             }
 
             update(particles: Particle[]) {
-                // Determine color dynamically in loop for instant theme switch (optional, but better to re-init on theme change)
-
-                // Move
                 this.x += this.vx;
                 this.y += this.vy;
 
-                // Bounce off edges
                 if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
                     this.vx = -this.vx;
                 }
@@ -94,14 +95,11 @@ export default function HeroAnimation() {
                     this.vy = -this.vy;
                 }
 
-                // Collision detection
                 for (const particle of particles) {
                     if (this === particle) continue;
-
                     const dx = this.x - particle.x;
                     const dy = this.y - particle.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-
                     if (distance < this.radius + particle.radius) {
                         resolveCollision(this, particle);
                     }
@@ -111,7 +109,6 @@ export default function HeroAnimation() {
             }
         }
 
-        // 1D elastic collision formula
         function rotate(velocity: { x: number, y: number }, angle: number) {
             return {
                 x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
@@ -122,29 +119,21 @@ export default function HeroAnimation() {
         function resolveCollision(particle: Particle, otherParticle: Particle) {
             const xVelocityDiff = particle.vx - otherParticle.vx;
             const yVelocityDiff = particle.vy - otherParticle.vy;
-
             const xDist = otherParticle.x - particle.x;
             const yDist = otherParticle.y - particle.y;
 
-            // Prevent accidental overlap
             if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
                 const angle = -Math.atan2(otherParticle.y - particle.y, otherParticle.x - particle.x);
-
                 const m1 = particle.mass;
                 const m2 = otherParticle.mass;
-
                 const u1 = rotate({ x: particle.vx, y: particle.vy }, angle);
                 const u2 = rotate({ x: otherParticle.vx, y: otherParticle.vy }, angle);
-
                 const v1 = { x: u1.x * (m1 - m2) / (m1 + m2) + u2.x * 2 * m2 / (m1 + m2), y: u1.y };
                 const v2 = { x: u2.x * (m1 - m2) / (m1 + m2) + u1.x * 2 * m1 / (m1 + m2), y: u2.y };
-
                 const vFinal1 = rotate(v1, -angle);
                 const vFinal2 = rotate(v2, -angle);
-
                 particle.vx = vFinal1.x;
                 particle.vy = vFinal1.y;
-
                 otherParticle.vx = vFinal2.x;
                 otherParticle.vy = vFinal2.y;
             }
@@ -152,7 +141,7 @@ export default function HeroAnimation() {
 
         const initParticles = () => {
             particles = [];
-            for (let i = 0; i < 125; i++) {
+            for (let i = 0; i < particleCount; i++) {
                 particles.push(new Particle());
             }
         };
@@ -174,7 +163,10 @@ export default function HeroAnimation() {
             window.removeEventListener("resize", resizeCanvas);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [mounted, resolvedTheme]);
+    }, [mounted, resolvedTheme, isMobile]);
+
+    const orbCount = isMobile ? 8 : 15;
+    const blurAmount = isMobile ? "blur-[40px]" : "blur-[80px]";
 
     return (
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -185,10 +177,10 @@ export default function HeroAnimation() {
                 transition={{ duration: 1.5 }}
                 className="absolute w-full h-full"
             >
-                {mounted && [...Array(15)].map((_, i) => (
+                {mounted && [...Array(orbCount)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute rounded-full blur-[80px] opacity-40 will-change-transform"
+                        className={`absolute rounded-full ${blurAmount} opacity-40 will-change-transform`}
                         initial={{
                             x: Math.random() * 100 - 50 + "vw",
                             y: Math.random() * 100 - 50 + "vh",
@@ -214,8 +206,8 @@ export default function HeroAnimation() {
                             ease: "linear",
                         }}
                         style={{
-                            width: Math.random() * 40 + 20 + "vw",
-                            height: Math.random() * 40 + 20 + "vw",
+                            width: isMobile ? Math.random() * 30 + 15 + "vw" : Math.random() * 40 + 20 + "vw",
+                            height: isMobile ? Math.random() * 30 + 15 + "vw" : Math.random() * 40 + 20 + "vw",
                             background: `radial-gradient(circle, ${colors[i % colors.length]} 0%, transparent 40%)`
                         }}
                     />
